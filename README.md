@@ -5,3 +5,5 @@ Evidence :
 ![image](https://github.com/kindiherdiansyah/Rakamin-Webauto-Java-Cucumber-Saucedemo/assets/26849052/e3535467-9a57-4d46-80aa-064d391ff4ba)
 
 Hasil Report Detail : https://drive.google.com/drive/folders/1RwldNqd8X924oreHD_HSohMYTQoh_4vd?usp=sharing
+
+Kesimpulan : Terdapat (Scenario Test 17 Passed) dan (1 Failed karena tidak sesuai Ekspetasi pada fitur cart)
