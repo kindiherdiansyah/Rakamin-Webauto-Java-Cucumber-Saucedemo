@@ -116,9 +116,9 @@ public class allStepDef {
     public void clickButtonCheckoutAndGetError() {
         WebElement checkoutButton = driver.findElement(By.xpath("//*[@id='checkout']"));
         checkoutButton.click();
+        driver.close();
         String expectedResult = "Message Error : Anda belum menambahkan produk";
         Assert.assertEquals("Hasil seharusnya sama dengan ekspektasi", expectedResult, checkoutButton);
-        driver.close();
     }
 
     @And("User fill the buyer's biodata form and click the Continue button")
