@@ -17,7 +17,6 @@ import java.util.concurrent.TimeUnit;
 public class allStepDef {
     WebDriver driver;
     String baseUrl = "https://www.saucedemo.com/";
-    boolean hasError = true;
 
     @Given("Halaman login saucedemo")
     public void halaman_login_saucedemo(){
