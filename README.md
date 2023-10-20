@@ -6,4 +6,4 @@ Evidence :
 
 Hasil Report Detail : https://drive.google.com/drive/folders/1RwldNqd8X924oreHD_HSohMYTQoh_4vd?usp=sharing
 
-Kesimpulan : Terdapat 18 Excute Scenario Test dengan Acuracy 94% (Scenario Test 17 Passed) dan (1 Failed karena tidak sesuai Ekspetasi pada fitur cart)
+Kesimpulan : Terdapat 7 Fitur dan 18 Excute Scenario Test dengan Akurasi Passed 94% (Scenario Test 17 Passed) dan (1 Failed karena tidak sesuai Ekspetasi pada fitur cart)
