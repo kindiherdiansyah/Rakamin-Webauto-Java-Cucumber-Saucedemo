@@ -1,5 +1,5 @@
-@ProductsMenuRelease
-Feature: Products Menu Saucedemo
+@CheckoutRelease
+Feature: Checkout Saucedemo
 
   @TDD @Positive
   Scenario Outline: Verify user is able to buy products via Homepage
@@ -35,5 +35,5 @@ Feature: Products Menu Saucedemo
     Then I verify failed to buy product and system will display the warning message
 
     Examples:
-      | username      | password      | status   |
-      | standard_user | secret_sauce  | failed   |
+      | username      | password      |
+      | standard_user | secret_sauce  |

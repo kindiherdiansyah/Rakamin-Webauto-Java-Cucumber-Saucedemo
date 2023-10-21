@@ -119,6 +119,7 @@ public class allStepDef {
         driver.close();
         String expectedResult = "Message Error : Anda belum menambahkan produk";
         Assert.assertEquals("Hasil seharusnya sama dengan ekspektasi", expectedResult, checkoutButton);
+
     }
 
     @And("User fill the buyer's biodata form and click the Continue button")
@@ -182,8 +183,8 @@ public class allStepDef {
 
     @Then("I see the number of products in the cart increasing")
     public void iSeeTheNumberOfProductsInTheCartIncreasing() {
-        String badge = driver.findElement(By.xpath("//*[@id='shopping_cart_container']/a/span")).getText();
-        Assert.assertEquals(badge,"1");
+        String badge = driver.findElement(By.xpath("//*[@id='shopping_cart_container']/a/span[contains(text(),'2')]")).getText();
+        Assert.assertEquals(badge,"2");
         driver.close();
     }
 
@@ -276,4 +277,54 @@ public class allStepDef {
         driver.close();
 
     }
+
+    @And("click remove on the product")
+    public void clickRemoveOnTheProduct() {
+        WebElement removeProductButton = driver.findElement(By.xpath("//*[@id='remove-sauce-labs-backpack'][contains(text(),'Remove')]"));
+        removeProductButton.click();
+    }
+
+    @And("click Add to Cart button on two of the product")
+    public void clickAddToCartButtonOnTwoOfTheProduct() {
+        WebElement addProductButton1 = driver.findElement(By.xpath("//*[@id='add-to-cart-sauce-labs-backpack']"));
+        addProductButton1.click();
+        WebElement addProductButton2 = driver.findElement(By.xpath("//*[@id='add-to-cart-sauce-labs-bike-light']"));
+        addProductButton2.click();
+    }
+
+    @Then("I see the the quantity on the cart icon decreases")
+    public void iSeeTheTheQuantityOnTheCartIconDecreases() {
+        String badge = driver.findElement(By.xpath("//*[@id='shopping_cart_container']/a/span[contains(text(),'1')]")).getText();
+        Assert.assertEquals(badge,"1");
+        driver.close();
+    }
+
+    @And("click Title product")
+    public void clickTitleProduct() {
+        WebElement viewProduct = driver.findElement(By.xpath("//*[@id='item_4_title_link']/div"));
+        viewProduct.click();
+    }
+
+    @Then("I see view the product details")
+    public void iSeeViewTheProductDetails() {
+        WebElement detailDescProduct = driver.findElement(By.xpath("//*[@id='inventory_item_container']/div/div/div[2]/div[2]"));
+        Assert.assertTrue("Detail Product terlihat", detailDescProduct.isDisplayed());
+        driver.close();
+    }
+
+    @Then("Click the Continue Shopping button and success return to the homepage products")
+    public void clickTheContinueShoppingButtonAndSuccessReturnToTheHomepageProducts() {
+        WebElement contiueShoppingBtn = driver.findElement(By.xpath("//*[@id='continue-shopping']"));
+        contiueShoppingBtn.click();
+        String homepage = driver.findElement(By.xpath("//*[@id='header_container']/div[2]/span")).getText();
+        Assert.assertEquals(homepage,"Products");
+        driver.close();
+    }
+
+    @And("click Menu All Items")
+    public void clickMenuAllItems() {
+        WebElement clickAllItems = driver.findElement(By.xpath("//*[@id='inventory_sidebar_link']"));
+        clickAllItems.click();
+    }
+
 }

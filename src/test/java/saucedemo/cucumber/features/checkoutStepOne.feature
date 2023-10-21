@@ -26,7 +26,7 @@ Feature: Checkout Step One Page Aplikasi Saucedemo
     Then user get error message "Error: First Name is required"
 
   @TDD
-  Scenario Outline: Verifikasi respon ketika melakukan input informasi checkout dengan data yang valid
+  Scenario Outline: Verifikasi respon ketika melakukan input informasi checkout
     Given Halaman login saucedemo
     When I input <username> as username
     And I input <password> as password
